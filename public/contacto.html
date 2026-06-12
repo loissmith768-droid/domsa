@@ -182,6 +182,14 @@
 <button class="md:hidden text-on-surface">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
+
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 flex flex-col p-6 gap-4 z-50 nav-blur">
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="/">Inicio</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="servicios">Servicios</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="arrendamiento">Arrendamiento de Equipo</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg" href="contacto">Contacto</a>
+</div>
 </nav>
 <!-- Main Content -->
 <main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -249,4 +257,21 @@
 </div>
 </div>
 </footer>
-</body></html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuBtn = document.querySelector('button[class*="md:hidden"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('span');
+                if (icon) {
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

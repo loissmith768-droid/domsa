@@ -122,6 +122,14 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-high/50 px-3 py-2 rounded" href="servicios">Servicios</a>
 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md px-3 py-2" href="arrendamiento">Arrendamiento de Equipo</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-high/50 px-3 py-2 rounded" href="contacto">Contacto</a>
+
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 flex flex-col p-6 gap-4 z-50 nav-blur">
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="/">Inicio</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="servicios">Servicios</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="arrendamiento">Arrendamiento de Equipo</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg" href="contacto">Contacto</a>
+</div>
 </nav>
 <button class="hidden md:flex items-center justify-center bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-3 rounded hover:bg-secondary-container transition-colors border-t border-secondary-fixed">
                 Contáctanos
@@ -332,4 +340,21 @@
 </div>
 </div>
 </footer>
-</body></html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuBtn = document.querySelector('button[class*="md:hidden"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('span');
+                if (icon) {
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

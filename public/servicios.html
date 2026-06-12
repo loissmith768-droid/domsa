@@ -195,6 +195,14 @@
 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="servicios">Servicios</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md py-2 hover:bg-surface-container-high/50 px-3 rounded" href="arrendamiento">Arrendamiento de Equipo</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md py-2 hover:bg-surface-container-high/50 px-3 rounded" href="contacto">Contacto</a>
+
+<!-- Mobile Menu Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 flex flex-col p-6 gap-4 z-50 nav-blur">
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="/">Inicio</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="servicios">Servicios</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg border-b border-outline-variant/10" href="arrendamiento">Arrendamiento de Equipo</a>
+    <a class="text-on-surface hover:text-primary transition-colors py-2 text-lg" href="contacto">Contacto</a>
+</div>
 </nav>
 <!-- Trailing Action -->
 <div class="hidden md:block">
@@ -244,6 +252,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">
                             Ofrecemos servicios especializados de dragado y desazolve para mantener canales, ríos y drenajes en óptimas condiciones, previniendo inundaciones y garantizando un flujo eficiente.
                         </p>
+                        <a class="inline-flex items-center text-primary mt-4 font-label-caps text-label-caps hover:text-primary/80 transition-colors" href="dragados">Ver especificaciones <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span></a>
 </div>
 </article>
 <!-- Service 2: Topografía -->
@@ -256,6 +265,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">
                         Levantamientos topográficos terrestres y batimétricos (medición de profundidades acuáticas) con tecnología especializada.
                     </p>
+                    <a class="inline-flex items-center text-primary mt-4 font-label-caps text-label-caps hover:text-primary/80 transition-colors" href="topografia">Ver especificaciones <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span></a>
 </article>
 <!-- Service 3: Obras Marinas -->
 <article class="group rounded-lg bg-surface-container border border-outline-variant/30 p-8 hover:bg-surface-container-high transition-colors tech-glow">
@@ -267,6 +277,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">
                         Construcción, cimentación y mantenimiento en entornos marinos y fluviales con altos estándares de ingeniería.
                     </p>
+                    <a class="inline-flex items-center text-primary mt-4 font-label-caps text-label-caps hover:text-primary/80 transition-colors" href="obras-marinas">Ver especificaciones <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span></a>
 </article>
 <!-- Service 4: FlexiFloats (Featured - Span 2) -->
 <article class="md:col-span-2 group relative rounded-lg bg-surface-container border border-outline-variant/30 overflow-hidden tech-glow flex flex-col md:flex-row hover:border-primary/50 transition-all duration-500">
@@ -277,6 +288,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant">
                             Arrendamiento de plataformas flotantes modulares (Flexifloats, Pontones o Chalanes) para obras acuáticas, con capacidad de carga y estabilidad industrial.
                         </p>
+                        <a class="inline-flex items-center text-primary mt-4 font-label-caps text-label-caps hover:text-primary/80 transition-colors" href="flexifloats">Ver especificaciones <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span></a>
 </div>
 <div class="md:w-1/2 relative min-h-[250px] md:min-h-full order-first md:order-last">
 <img alt="Plataforma modular FlexiFloat en alta mar" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" src="images/flexifloat_horizontal.jpg"/>
@@ -294,6 +306,7 @@
 <p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
                             Diseño, fabricación y venta de soluciones personalizadas para la industria naval e industrial marina.
                         </p>
+                        <a class="inline-flex items-center text-primary mt-4 font-label-caps text-label-caps hover:text-primary/80 transition-colors" href="comercializacion">Ver especificaciones <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span></a>
 </div>
 </article>
 </div>
@@ -313,7 +326,7 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
                         Convertimos tus proyectos en resultados concretos. Te acompañamos en cada etapa con soluciones técnicas eficientes y ejecución precisa.
                     </p>
-<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-headline-sm text-base font-bold px-8 py-4 rounded hover:bg-primary-container/80 hover:shadow-lg hover:shadow-primary/10 transition-all border-t border-secondary" href="#">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container font-headline-sm text-base font-bold px-8 py-4 rounded hover:bg-primary-container/80 hover:shadow-lg hover:shadow-primary/10 transition-all border-t border-secondary" href="contacto">
                         Solicitar Cotización
                         <span class="material-symbols-outlined text-xl">arrow_forward</span>
 </a>
@@ -333,11 +346,28 @@
 </div>
 <!-- Links Columns -->
 <div class="md:col-span-8 flex flex-wrap gap-x-12 gap-y-4 justify-start md:justify-end">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidad</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Términos</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Soporte Técnico</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Bolsa de Trabajo</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto">Términos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto">Soporte Técnico</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contacto">Bolsa de Trabajo</a>
 </div>
 </div>
 </footer>
-</body></html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuBtn = document.querySelector('button[class*="md:hidden"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuBtn.querySelector('span');
+                if (icon) {
+                    icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
