@@ -1,0 +1,17 @@
+# Firebase
+.firebase/
+firebase-debug.log
+ui-debug.log
+
+# IDE and System Files
+.system_generated/
+*.log
+.DS_Store
+Thumbs.db
+
+# Scratch directory (temporary scripts)
+scratch/
+check_generic_context.py
+dump_cards.py
+execute_replacements.py
+find_images.py
