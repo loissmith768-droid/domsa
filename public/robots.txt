@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://domsadragados.com/sitemap.xml
+Sitemap: https://renta-flexifloats-pontones-chalanes-mexico.vercel.app/sitemap.xml
