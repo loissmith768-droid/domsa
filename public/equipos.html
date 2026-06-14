@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Galería de Equipos y Maquinaria | Renta de Flexifloats, Chalanes y Pontones - DOMSA</title>
+    <meta name="description" content="Catálogo de equipos marinos y maquinaria pesada de DOMSA. Fotos reales de Flexifloats, pontones acoplables, chalanes de carga, barcazas de acero y spuds de anclaje para obras marítimas en México."/>
+    <meta name="keywords" content="galeria flexifloat, catalogo pontones, fotos chalanes modulares, barcazas de acero, spuds de anclaje, dragados, maquinaria pesada, Veracruz, Mexico"/>
+    <meta name="robots" content="index, follow, max-image-preview:large"/>
+    <meta name="author" content="DOMSA Dragados y Obras Marinas"/>
+    <link rel="canonical" href="https://domsa-dragados-preview.web.app/equipos"/>
+    <!-- Open Graph -->
+    <meta property="og:locale" content="es_MX"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Galería de Equipos y Maquinaria | Renta de Flexifloats y Chalanes - DOMSA"/>
+    <meta property="og:description" content="Catálogo de equipos marinos y maquinaria pesada de DOMSA. Fotos reales de Flexifloats, chalanes y pontones para obras marítimas."/>
+    <meta property="og:url" content="https://domsa-dragados-preview.web.app/equipos"/>
+    <meta property="og:site_name" content="DOMSA Dragados y Obras Marinas"/>
+    <meta property="og:image" content="images/logo.png"/>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Galería de Equipos y Maquinaria | DOMSA"/>
+    <meta name="twitter:description" content="Fotos reales de Flexifloats, pontones, chalanes y maquinaria de DOMSA para proyectos de ingeniería marítima."/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <link rel="apple-touch-icon" href="images/logo.png"/>
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Galería de Equipos y Maquinaria Marina - DOMSA",
+        "description": "Catálogo de fotos reales de Flexifloats, pontones acoplables de acero, chalanes, barcazas modulares y spuds de anclaje de DOMSA.",
+        "url": "https://domsa-dragados-preview.web.app/equipos",
+        "about": {
+            "@type": "LocalBusiness",
+            "name": "DOMSA Dragados y Obras Marinas",
+            "image": "https://domsa-dragados-preview.web.app/images/logo.png",
+            "telephone": "+52 993 207 4771",
+            "email": "contacto@domsadragados.com"
+        }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..800&amp;family=Work+Sans:wght@400..700&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#393b3b",
+                        "on-primary": "#003732",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-container-lowest": "#011a20",
+                        "surface-tint": "#00ebd6",
+                        "error-container": "#93000a",
+                        "tertiary": "#c6c6c7",
+                        "on-background": "#dfe2f0",
+                        "surface-dim": "#02232b",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "inverse-surface": "#dfe2f0",
+                        "surface-container": "#033b47",
+                        "on-tertiary-container": "#a4a5a5",
+                        "inverse-on-surface": "#2c303b",
+                        "on-secondary-container": "#90e0ef",
+                        "on-primary-fixed-variant": "#314380",
+                        "surface-bright": "#353944",
+                        "outline": "#8f909b",
+                        "on-primary-fixed": "#001550",
+                        "primary-fixed": "#c7fff9",
+                        "on-primary-container": "#33f3e3",
+                        "surface-container-low": "#022f39",
+                        "surface-container-highest": "#055667",
+                        "on-tertiary": "#2f3131",
+                        "on-surface": "#dfe2f0",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#00363a",
+                        "secondary": "#00b4d8",
+                        "background": "#02232b",
+                        "on-secondary-fixed-variant": "#0f4785",
+                        "on-error": "#690005",
+                        "surface-variant": "#055667",
+                        "secondary-fixed-dim": "#00b4d8",
+                        "error": "#ffb4ab",
+                        "surface": "#022830",
+                        "secondary-container": "#004d61",
+                        "surface-container-high": "#044856",
+                        "primary-fixed-dim": "#00ebd6",
+                        "primary": "#00ebd6",
+                        "on-surface-variant": "#c5c5d1",
+                        "on-secondary": "#002d3d",
+                        "tertiary-fixed": "#e2e2e2",
+                        "inverse-primary": "#4a5b9a",
+                        "secondary-fixed": "#cbf2ff",
+                        "outline-variant": "#454650",
+                        "on-secondary-fixed": "#001b2a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Work Sans"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(3, 59, 71, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+        .text-glow { text-shadow: 0 0 10px rgba(0, 235, 214, 0.3); }
+        .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .aspect-card {
+            aspect-ratio: 4 / 3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased flex flex-col min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-sm transition-all duration-300">
+        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex items-center gap-4">
+                <img alt="DOMSA Logo" class="h-10 w-10 rounded" src="images/logo.png"/>
+                <span class="font-display-lg text-sm md:text-headline-sm font-bold tracking-tighter text-on-surface">Catálogo DOMSA</span>
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-high/50 px-3 py-2 rounded" href="index.html#inicio">Inicio</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-high/50 px-3 py-2 rounded" href="index.html#quienes-somos">Nosotros</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:bg-surface-container-high/50 px-3 py-2 rounded" href="index.html#contacto">Contacto</a>
+            </nav>
+            <a class="inline-flex items-center justify-center bg-surface-container-high border border-outline-variant text-on-surface font-label-caps text-label-caps px-5 py-2.5 rounded hover:bg-surface-container transition-colors shadow-sm" href="index.html">
+                <span class="material-symbols-outlined mr-2 text-sm">arrow_back</span> Regresar
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-20">
+        <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            
+            <!-- Hero Header -->
+            <div class="text-center md:text-left mb-12 flex flex-col gap-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container/50 border border-outline-variant/30 rounded-full nav-blur w-fit mx-auto md:mx-0">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                    <span class="font-label-caps text-on-surface-variant uppercase text-[10px] tracking-wider font-semibold">Galería de Fotos Reales</span>
+                </div>
+                <h1 class="font-display-lg-mobile md:font-display-lg text-headline-md md:text-display-lg text-glow text-on-surface font-extrabold tracking-tight">
+                    Nuestra <span class="text-primary">Infraestructura</span> en Detalle
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+                    Fotografías reales de nuestros pontones modulares de acero, rampas de acoplamiento, spuds de anclaje y logística de transporte pesado. Haz clic en cualquier imagen para verla en pantalla completa.
+                </p>
+            </div>
+
+            <!-- Gallery Grid (1 col on mobile, 2 col on tablet, 3 col on large screens) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Equipos en el Mar (Imagen Generada) -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(0)">
+                        <img alt="Equipos en el Mar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/equipos_en_mar.png"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">OPERACIÓN MARÍTIMA</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Plataformas en el Mar</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Sistemas de pontones modulares en operaciones de dragado, enrocamientos y posicionamiento de maquinaria pesada sobre agua.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20las%20Plataformas%20modulares%20en%20el%20mar.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Rampas y Acoplamientos -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(1)">
+                        <img alt="Rampas y Cuñas de Acoplamiento" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/equipo_marino.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">ACCESORIOS MODULARES</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Rampas de Acceso y Cuñas</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Diseñadas para permitir el embarque seguro de excavadoras y grúas desde la playa o muelles hacia las plataformas flotantes.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20las%20Rampas%20de%20Acceso%20y%20Cuñas.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Sistemas de Spuds y Pilotes -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(2)">
+                        <img alt="Sistemas de Spuds y Pilotes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/flexifloat_vertical.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">ANCLAJE DE CARGA</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Spuds y Pilotes de Anclaje</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Módulos verticales mecánicos para fijar firmemente las barcazas modulares en el lecho marino o fluvial, contrarrestando corrientes de agua.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20los%20Spuds%20y%20Pilotes%20de%20Anclaje.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Pontones Modulares (Flexifloats) -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(3)">
+                        <img alt="Pontones Modulares Flexifloats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/flexifloat_horizontal.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">PLATAFORMAS ACOPLES</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Flexifloats Horizontales</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Módulos horizontales de acero con sistema de ensamble patentado de alta resistencia, ideales para posicionamiento de maquinaria sobre agua.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20los%20Flexifloats%20Horizontales.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Chalanes y Barcazas en Puerto -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(4)">
+                        <img alt="Chalanes y Barcazas en Puerto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/obras_marinas.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">EQUIPAMIENTO MARÍTIMO</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Barcazas de Gran Calado</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Unidades modulares configuradas y ensambladas en puerto, listas para soportar excavadoras de largo alcance y grúas de izaje marino.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20las%20Barcazas%20de%20Gran%20Calado.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Logística y Traslado Volvo -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(5)">
+                        <img alt="Logística y Traslado de Pontones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/camion_transporte.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">TRANSPORTE Y LOGÍSTICA</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Traslado Terrestre DOMSA</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Flota logística dedicada al transporte de pontones y spuds de acero en plataformas Lowboy a cualquier costa o puerto de México.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20el%20servicio%20de%20Traslado%20Terrestre.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7: Flexifloats en Laguna -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(6)">
+                        <img alt="Flexifloats en Laguna" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/proyecto_flexifloat_laguna.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">OBRA EN LAGUNA</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Flexifloats en Laguna</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Soporte de grúa y maquinaria pesada operando en laguna para construcción de pilotes y cimentaciones marítimas.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20la%20renta%20de%20Flexifloats%20en%20Laguna.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8: Izaje de Estructuras Marítimas -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(7)">
+                        <img alt="Izaje de Estructuras Marítimas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/gruas_izaje_obra.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">IZAJE Y MANIOBRAS</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Izaje de Estructuras Marítimas</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Maniobras de gran tonelaje con grúas Link-Belt para posicionamiento de pilotes y construcción de obra civil marina.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20el%20servicio%20de%20Izaje%20y%20Maniobras.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 9: Maquinaria en Playa -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(8)">
+                        <img alt="Maquinaria en Playa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/excavadora_playa.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">OBRA COSTERA</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Maquinaria en Playa</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Excavadora de orugas CAT en operaciones de canalización, contención y dragado en zonas playeras e intermareales.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20maquinaria%20pesada%20en%20playa.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 10: Chalán de Carga en Puerto -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(9)">
+                        <img alt="Chalán de Carga en Puerto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/chalan_puerto.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">TRANSPORTE FLOTANTE</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Chalán de Carga en Puerto</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Chalanes modulares de alta capacidad para el acarreo de materiales pétreos, maquinaria pesada y soporte de dragados.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20la%20renta%20de%20Chalán%20de%20Carga.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 11: Spuds de Anclaje de Acero -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(10)">
+                        <img alt="Spuds de Anclaje de Acero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/spuds_anclaje.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">SISTEMAS DE ANCLAJE</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Spuds de Anclaje de Acero</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Mecanismos de anclaje vertical para fijar de manera segura las plataformas en el lecho marino o fluvial contra corrientes.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20Sistemas%20de%20Spuds%20y%20Pilotes.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 12: Dragado con Excavadora -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(11)">
+                        <img alt="Dragado con Excavadora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/maquinaria_sobre_flexifloat.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">OPERACIÓN DE DRAGADO</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Dragado con Excavadora</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Excavadora hidráulica de largo alcance posicionada sobre plataforma modular Flexifloat en desazolve y dragado de río.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20Dragado%20con%20Excavadora.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 13: Módulos en Astillero -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(12)">
+                        <img alt="Módulos en Astillero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/flexifloats_astillero.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">ALMACÉN LOGÍSTICO</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Módulos en Astillero</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Amplio stock de módulos de acero Flexifloats listos en patio para ensamble rápido y despacho inmediato a obra marítima.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20Módulos%20Flexifloats%20en%20Astillero.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 14: Rampas de Acoplamiento -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(13)">
+                        <img alt="Rampas de Acoplamiento" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/rampas_acoplamiento.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">ACCESORIOS MARINOS</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Rampas de Acoplamiento</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Rampas y cuñas de ensamble reforzadas para facilitar la carga, descarga y posicionamiento seguro de maquinaria pesada.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20Rampas%20de%20Acoplamiento.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 15: Construcción de Puentes -->
+                <div class="group bg-surface-container rounded-lg border border-outline-variant/20 overflow-hidden hover:border-primary/50 transition-all duration-300 ambient-shadow flex flex-col">
+                    <div class="h-64 relative overflow-hidden cursor-pointer" onclick="openLightbox(14)">
+                        <img alt="Construcción de Puentes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="images/obra_civil_puente.jpg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent opacity-60"></div>
+                        <span class="absolute bottom-4 right-4 bg-background/80 backdrop-blur px-2.5 py-1 rounded border border-outline-variant/30 font-label-caps text-[10px] text-primary flex items-center gap-1">
+                            <span class="material-symbols-outlined text-xs">zoom_in</span> PANTALLA COMPLETA
+                        </span>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <span class="font-label-caps text-[10px] text-primary-fixed-dim tracking-wider uppercase font-bold block mb-1">INFRAESTRUCTURA CIVIL</span>
+                            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold">Construcción de Puentes</h2>
+                            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-6">
+                                Soporte modular y logística en obras civiles complejas, puentes peatonales y vehiculares sobre cuerpos de agua.
+                            </p>
+                        </div>
+                        <a class="w-full inline-flex items-center justify-center gap-2 bg-primary text-on-primary font-label-caps text-xs py-3.5 rounded hover:bg-primary/80 transition-all font-bold shadow-md" href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20soporte%20para%20Construcción%20de%20Puentes.">
+                            Cotizar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal (Fullscreen Image Overlay) -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-background/95 backdrop-blur-md flex flex-col justify-center items-center p-4 transition-opacity duration-300 hidden opacity-0">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-on-surface hover:text-primary transition-colors cursor-pointer p-2 flex items-center justify-center bg-surface-container/60 rounded-full border border-outline-variant/30 z-[110]" aria-label="Cerrar">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button onclick="prevImage(event)" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-on-surface hover:text-primary transition-colors cursor-pointer p-3 bg-surface-container/60 rounded-full border border-outline-variant/30 z-[110]" aria-label="Anterior">
+            <span class="material-symbols-outlined text-3xl">chevron_left</span>
+        </button>
+        <button onclick="nextImage(event)" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-on-surface hover:text-primary transition-colors cursor-pointer p-3 bg-surface-container/60 rounded-full border border-outline-variant/30 z-[110]" aria-label="Siguiente">
+            <span class="material-symbols-outlined text-3xl">chevron_right</span>
+        </button>
+
+        <!-- Main Image Container -->
+        <div class="relative w-full max-w-4xl h-[70vh] flex justify-center items-center">
+            <img id="lightbox-img" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl border border-outline-variant/10" src="" alt=""/>
+        </div>
+
+        <!-- Description Panel -->
+        <div class="w-full max-w-2xl text-center mt-6 px-4">
+            <span id="lightbox-tag" class="font-label-caps text-[10px] text-primary tracking-widest uppercase font-bold block mb-1"></span>
+            <h3 id="lightbox-title" class="font-headline-sm text-headline-sm text-on-surface mb-2 font-bold text-glow"></h3>
+            <p id="lightbox-desc" class="font-body-md text-sm text-on-surface-variant max-w-xl mx-auto"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/20 py-12 px-margin-mobile md:px-margin-desktop mt-auto">
+        <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <img alt="DOMSA Logo" class="h-8 w-8 rounded" src="images/logo.png"/>
+                <span class="font-display-lg text-sm font-bold tracking-tighter text-on-surface">Flexifloats, Pontones o Chalanes</span>
+            </div>
+            <p class="font-body-md text-sm text-on-surface-variant">© <script>document.write(new Date().getFullYear())</script> DOMSA. Todos los derechos reservados. Empresa orgullosamente mexicana.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/529932074771?text=Hola%20DOMSA,%20quiero%20cotizar%20la%20renta%20de%20equipos%20de%20Flexifloats%20y%20Pontones." class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:bg-emerald-500 transition-colors animate-bounce shadow-emerald-950/30 group" aria-label="Contacto por WhatsApp">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.333 4.982L2 22l5.202-1.362a9.928 9.928 0 004.8 1.233h.005c5.505 0 9.99-4.479 9.99-9.986A9.975 9.975 0 0012.012 2zm5.82 14.24c-.246.693-1.42 1.275-1.956 1.348-.48.065-.968.106-2.9-0.658-2.47-0.978-4.047-3.486-4.17-3.649-.124-.163-1.012-1.347-1.012-2.569a2.532 2.532 0 01.764-1.892c.264-.265.577-.333.765-.333h.544c.163 0 .385-.061.602.457.22.53.754 1.838.82 1.97.065.132.108.286.02.463-.087.177-.13.286-.26.44-.131.156-.276.35-.395.47-.133.133-.272.278-.118.544.155.265.688 1.134 1.474 1.83.998.887 1.84 1.166 2.102 1.298.263.133.417.11.57-.066.154-.176.66-.772.836-1.037.177-.265.354-.22.597-.132.243.088 1.545.728 1.81 0.86.265.132.441.198.508.31.066.11.066.637-.18 1.33z"/>
+        </svg>
+        <span class="absolute right-16 bg-surface px-3 py-1.5 rounded border border-outline-variant/30 text-xs font-label-caps text-on-surface opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md">¿Preguntas? Chatea con nosotros</span>
+    </a>
+
+    <!-- Lightbox Script -->
+    <script>
+        // Data for the 15 gallery items
+        const galleryItems = [
+            {
+                src: 'images/equipos_en_mar.png',
+                tag: 'OPERACIÓN MARÍTIMA',
+                title: 'Plataformas en el Mar',
+                desc: 'Sistemas de pontones modulares en operaciones de dragado, enrocamientos y posicionamiento de maquinaria pesada sobre agua.'
+            },
+            {
+                src: 'images/equipo_marino.jpg',
+                tag: 'ACCESORIOS MODULARES',
+                title: 'Rampas de Acceso y Cuñas',
+                desc: 'Diseñadas para permitir el embarque seguro de excavadoras y grúas desde la playa o muelles hacia las plataformas flotantes.'
+            },
+            {
+                src: 'images/flexifloat_vertical.jpg',
+                tag: 'ANCLAJE DE CARGA',
+                title: 'Spuds y Pilotes de Anclaje',
+                desc: 'Módulos verticales mecánicos para fijar firmemente las barcazas modulares en el lecho marino o fluvial, contrarrestando corrientes de agua.'
+            },
+            {
+                src: 'images/flexifloat_horizontal.jpg',
+                tag: 'PLATAFORMAS ACOPLES',
+                title: 'Flexifloats Horizontales',
+                desc: 'Módulos horizontales de acero con sistema de ensamble patentado de alta resistencia, ideales para posicionamiento de maquinaria sobre agua.'
+            },
+            {
+                src: 'images/obras_marinas.jpg',
+                tag: 'EQUIPAMIENTO MARÍTIMO',
+                title: 'Barcazas de Gran Calado',
+                desc: 'Unidades modulares configuradas y ensambladas en puerto, listas para soportar excavadoras de largo alcance y grúas de izaje marino.'
+            },
+            {
+                src: 'images/camion_transporte.jpg',
+                tag: 'TRANSPORTE Y LOGÍSTICA',
+                title: 'Traslado Terrestre DOMSA',
+                desc: 'Flota logística dedicada al transporte de pontones y spuds de acero en plataformas Lowboy a cualquier costa o puerto de México.'
+            },
+            {
+                src: 'images/proyecto_flexifloat_laguna.jpg',
+                tag: 'OBRA EN LAGUNA',
+                title: 'Flexifloats en Laguna',
+                desc: 'Soporte de grúa y maquinaria pesada operando en laguna para construcción de pilotes y cimentaciones marítimas.'
+            },
+            {
+                src: 'images/gruas_izaje_obra.jpg',
+                tag: 'IZAJE Y MANIOBRAS',
+                title: 'Izaje de Estructuras Marítimas',
+                desc: 'Maniobras de gran tonelaje con grúas Link-Belt para posicionamiento de pilotes y construcción de obra civil marina.'
+            },
+            {
+                src: 'images/excavadora_playa.jpg',
+                tag: 'OBRA COSTERA',
+                title: 'Maquinaria en Playa',
+                desc: 'Excavadora de orugas CAT en operaciones de canalización, contención y dragado en zonas playeras e intermareales.'
+            },
+            {
+                src: 'images/chalan_puerto.jpg',
+                tag: 'TRANSPORTE FLOTANTE',
+                title: 'Chalán de Carga en Puerto',
+                desc: 'Chalanes modulares de alta capacidad para el acarreo de materiales pétreos, maquinaria pesada y soporte de dragados.'
+            },
+            {
+                src: 'images/spuds_anclaje.jpg',
+                tag: 'SISTEMAS DE ANCLAJE',
+                title: 'Spuds de Anclaje de Acero',
+                desc: 'Mecanismos de anclaje vertical para fijar de manera segura las plataformas en el lecho marino o fluvial contra corrientes.'
+            },
+            {
+                src: 'images/maquinaria_sobre_flexifloat.jpg',
+                tag: 'OPERACIÓN DE DRAGADO',
+                title: 'Dragado con Excavadora',
+                desc: 'Excavadora hidráulica de largo alcance posicionada sobre plataforma modular Flexifloat en desazolve y dragado de río.'
+            },
+            {
+                src: 'images/flexifloats_astillero.jpg',
+                tag: 'ALMACÉN LOGÍSTICO',
+                title: 'Módulos en Astillero',
+                desc: 'Amplio stock de módulos de acero Flexifloats listos en patio para ensamble rápido y despacho inmediato a obra marítima.'
+            },
+            {
+                src: 'images/rampas_acoplamiento.jpg',
+                tag: 'ACCESORIOS MARINOS',
+                title: 'Rampas de Acoplamiento',
+                desc: 'Rampas y cuñas de ensamble reforzadas para facilitar la carga, descarga y posicionamiento seguro de maquinaria pesada.'
+            },
+            {
+                src: 'images/obra_civil_puente.jpg',
+                tag: 'INFRAESTRUCTURA CIVIL',
+                title: 'Construcción de Puentes',
+                desc: 'Soporte modular y logística en obras civiles complejas, puentes peatonales y vehiculares sobre cuerpos de agua.'
+            }
+        ];
+
+        let currentIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTag = document.getElementById('lightbox-tag');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDesc = document.getElementById('lightbox-desc');
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            
+            // Show lightbox
+            lightbox.classList.remove('hidden');
+            // Small timeout to trigger opacity transition
+            setTimeout(() => {
+                lightbox.classList.add('opacity-100');
+            }, 10);
+            
+            // Prevent scrolling on background
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('opacity-100');
+            // Wait for transition to complete
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+            }, 300);
+            
+            // Restore scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightbox() {
+            const item = galleryItems[currentIndex];
+            lightboxImg.src = item.src;
+            lightboxImg.alt = item.title;
+            lightboxTag.textContent = item.tag;
+            lightboxTitle.textContent = item.title;
+            lightboxDesc.textContent = item.desc;
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateLightbox();
+        }
+
+        function prevImage(event) {
+            event.stopPropagation();
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateLightbox();
+        }
+
+        // Close lightbox when clicking background (overlay)
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox || e.target === document.getElementById('lightbox-img').parentNode) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation (Esc, Left, Right arrows)
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                } else if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % galleryItems.length;
+                    updateLightbox();
+                } else if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                    updateLightbox();
+                }
+            }
+        });
+
+        // Swipe Gestures for Mobile (Touch Events)
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        lightbox.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        });
+
+        lightbox.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            const threshold = 50; // Minimum swipe distance in px
+            if (touchendX < touchstartX - threshold) {
+                // Swiped Left -> Next Image
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                updateLightbox();
+            }
+            if (touchendX > touchstartX + threshold) {
+                // Swiped Right -> Prev Image
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                updateLightbox();
+            }
+        }
+    </script>
+</body>
+</html>
