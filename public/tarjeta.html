@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DOMSA — Tarjeta Digital | Dragados y Obras Marinas</title>
   <meta name="description" content="Tarjeta de contacto digital de DOMSA Dragados y Obras Marinas. Teléfono, WhatsApp, correo, ubicación y redes sociales."/>
-  <meta name="robots" content="noindex"/>
-  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <link rel="icon" type="image/png" href="/images/logo.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
@@ -14,20 +13,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #080c14;
-      --surface: #0e1525;
-      --surface2: #131d30;
-      --border: rgba(255,255,255,0.08);
-      --border-hover: rgba(0,188,212,0.5);
+      --bg: #070b12;
+      --surface: #0d1524;
+      --surface2: #111e30;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(0,188,212,0.45);
       --primary: #00bcd4;
-      --primary-glow: rgba(0,188,212,0.25);
       --primary-dark: #0097a7;
       --text: #e8edf5;
       --text-muted: #7a8fa6;
-      --text-dim: #4a5f75;
-      --gold: #f4c842;
+      --text-dim: #3d5268;
       --green: #22c55e;
-      --wa-green: #25d366;
+      --wa: #25d366;
     }
 
     html { scroll-behavior: smooth; }
@@ -38,580 +35,468 @@
       color: var(--text);
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px 16px;
+      padding: 24px 16px 40px;
       position: relative;
       overflow-x: hidden;
     }
 
-    /* Ambient background */
+    /* Ambient glow */
     body::before {
       content: '';
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background:
-        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(0,188,212,0.07) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 80% 90%, rgba(0,97,137,0.1) 0%, transparent 55%);
-      pointer-events: none;
-      z-index: 0;
+        radial-gradient(ellipse 70% 45% at 15% 5%,  rgba(0,188,212,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 85% 95%, rgba(0,97,137,0.10) 0%, transparent 55%);
+      pointer-events: none; z-index: 0;
     }
 
-    /* Floating particles */
-    .particles {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-    .particle {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 50%;
-      opacity: 0;
-      animation: float-up linear infinite;
-    }
-    @keyframes float-up {
-      0%   { transform: translateY(100vh) translateX(0); opacity: 0; }
-      10%  { opacity: 0.6; }
-      90%  { opacity: 0.3; }
-      100% { transform: translateY(-10vh) translateX(30px); opacity: 0; }
+    /* Particles */
+    .particles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .p { position: absolute; border-radius: 50%; background: var(--primary); opacity: 0; animation: floatUp linear infinite; }
+    @keyframes floatUp {
+      0%   { transform: translateY(105vh); opacity: 0; }
+      10%  { opacity: 0.5; }
+      90%  { opacity: 0.2; }
+      100% { transform: translateY(-5vh) translateX(20px); opacity: 0; }
     }
 
-    /* Card container */
-    .card-wrapper {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      max-width: 420px;
+    /* ── Card ── */
+    .card-wrap {
+      position: relative; z-index: 1;
+      width: 100%; max-width: 430px;
     }
-
-    /* Header glow line */
-    .card-wrapper::before {
+    .card-wrap::before {
       content: '';
-      position: absolute;
-      top: -1px;
-      left: 10%;
-      right: 10%;
-      height: 2px;
+      position: absolute; top: -1px; left: 8%; right: 8%; height: 2px;
       background: linear-gradient(90deg, transparent, var(--primary), transparent);
-      border-radius: 2px;
-      filter: blur(1px);
+      border-radius: 2px; filter: blur(1px);
     }
-
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 24px;
       overflow: hidden;
-      box-shadow:
-        0 4px 6px rgba(0,0,0,0.4),
-        0 20px 60px rgba(0,0,0,0.5),
-        0 0 80px rgba(0,188,212,0.04);
+      box-shadow: 0 4px 6px rgba(0,0,0,.5), 0 24px 70px rgba(0,0,0,.6), 0 0 80px rgba(0,188,212,.04);
     }
 
-    /* Hero section */
+    /* ── Hero ── */
     .hero {
-      background: linear-gradient(160deg, #0a1628 0%, #0d1f3c 50%, #091520 100%);
-      padding: 40px 32px 32px;
+      background: linear-gradient(160deg, #08162b 0%, #0d2040 45%, #091820 100%);
+      padding: 44px 28px 32px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      position: relative; overflow: hidden;
     }
     .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 1px;
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
       background: linear-gradient(90deg, transparent, var(--primary), transparent);
-      opacity: 0.4;
+      opacity: 0.35;
     }
 
-    /* Decorative ring behind logo */
+    /* Water-wave decorative lines in hero background */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent, transparent 28px,
+          rgba(0,188,212,0.03) 28px, rgba(0,188,212,0.03) 29px
+        );
+      pointer-events: none;
+    }
+
+    /* Logo ring */
     .logo-ring {
-      position: relative;
-      width: 96px;
-      height: 96px;
+      position: relative; width: 100px; height: 100px;
       margin: 0 auto 20px;
     }
-    .logo-ring::before {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      background: conic-gradient(var(--primary), var(--primary-dark), transparent, var(--primary));
+    .ring-spin {
+      position: absolute; inset: -5px; border-radius: 50%;
+      background: conic-gradient(var(--primary) 0deg, var(--primary-dark) 120deg, transparent 200deg, var(--primary) 360deg);
       animation: spin 8s linear infinite;
     }
-    .logo-ring::after {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 50%;
+    .ring-mask {
+      position: absolute; inset: -1px; border-radius: 50%;
       background: var(--surface);
+      /* Leave 3px gap around img */
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    .logo-img {
-      position: relative;
-      z-index: 1;
-      width: 96px;
-      height: 96px;
+    .logo-img-wrap {
+      position: absolute; inset: 0;
       border-radius: 50%;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      background: #0d1f3c;
+      border: 3px solid transparent;
+    }
+    .logo-img {
+      width: 100%; height: 100%;
       object-fit: cover;
-      border: 3px solid var(--surface);
+      border-radius: 50%;
+    }
+    /* Fallback initials if image fails */
+    .logo-fallback {
+      display: none;
+      font-size: 26px; font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.05em;
     }
 
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(0,188,212,0.1);
-      border: 1px solid rgba(0,188,212,0.25);
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(0,188,212,.1);
+      border: 1px solid rgba(0,188,212,.25);
       color: var(--primary);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 12px;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: .15em; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 20px; margin-bottom: 12px;
     }
-    .badge::before {
-      content: '';
-      width: 6px; height: 6px;
+    .badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
       background: var(--green);
-      border-radius: 50%;
-      animation: pulse 2s ease-in-out infinite;
+      animation: blink 2s ease-in-out infinite;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.5; transform: scale(0.8); }
-    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.4;} }
 
     .company-name {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      line-height: 1.1;
+      font-size: 30px; font-weight: 900;
+      letter-spacing: -.025em; color: var(--text); line-height: 1.1;
     }
     .company-name span { color: var(--primary); }
-
     .tagline {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 8px;
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      line-height: 1.5;
+      font-size: 12px; color: var(--text-muted);
+      margin-top: 8px; line-height: 1.6;
     }
 
-    /* Body */
-    .card-body {
-      padding: 24px 24px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    /* ── Body ── */
+    .card-body { padding: 22px 20px 26px; display: flex; flex-direction: column; gap: 7px; }
 
-    /* Section label */
     .section-label {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin: 12px 0 6px 4px;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--text-dim); margin: 10px 0 4px 4px;
     }
 
-    /* Action button */
-    .action-btn {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    /* ── Action btn ── */
+    .btn {
+      display: flex; align-items: center; gap: 13px;
       background: var(--surface2);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 16px;
-      text-decoration: none;
-      color: var(--text);
-      transition: all 0.2s ease;
-      cursor: pointer;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
+      border-radius: 14px; padding: 13px 15px;
+      text-decoration: none; color: var(--text);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      cursor: pointer; width: 100%; position: relative; overflow: hidden;
     }
-    .action-btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, transparent, rgba(0,188,212,0.05));
-      opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .action-btn:hover {
+    .btn:hover {
       border-color: var(--border-hover);
       transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 16px rgba(0,188,212,0.08);
+      box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 14px rgba(0,188,212,.07);
     }
-    .action-btn:hover::before { opacity: 1; }
-    .action-btn:active { transform: translateY(0); }
+    .btn:active { transform: translateY(0); }
 
-    .btn-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 20px;
+    .ico {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 19px;
     }
-
-    .icon-phone  { background: rgba(0,188,212,0.12); }
-    .icon-phone2 { background: rgba(100,149,237,0.12); }
-    .icon-wa     { background: rgba(37,211,102,0.12); }
-    .icon-mail   { background: rgba(244,200,66,0.12); }
-    .icon-mail2  { background: rgba(200,162,200,0.12); }
-    .icon-map    { background: rgba(255,99,71,0.12); }
-    .icon-web    { background: rgba(0,188,212,0.12); }
-    .icon-fb     { background: rgba(24,119,242,0.12); }
-    .icon-ig     { background: rgba(225,48,108,0.12); }
+    .ico-phone  { background: rgba(0,188,212,.12); }
+    .ico-phone2 { background: rgba(100,149,237,.12); }
+    .ico-wa     { background: rgba(37,211,102,.12); }
+    .ico-mail   { background: rgba(244,200,66,.12); }
+    .ico-mail2  { background: rgba(186,104,200,.12); }
+    .ico-map    { background: rgba(255,99,71,.12); }
+    .ico-web    { background: rgba(0,188,212,.12); }
+    .ico-fb     { background: rgba(24,119,242,.12); }
+    .ico-ig     { background: rgba(225,48,108,.12); }
 
     .btn-texts { flex: 1; min-width: 0; }
-    .btn-label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      display: block;
+    .lbl {
+      font-size: 9.5px; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--text-muted); display: block;
     }
-    .btn-value {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-      display: block;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      margin-top: 2px;
+    .val {
+      font-size: 13.5px; font-weight: 600; color: var(--text);
+      display: block; white-space: nowrap; overflow: hidden;
+      text-overflow: ellipsis; margin-top: 2px;
     }
+    .arr { font-size: 16px; color: var(--text-dim); flex-shrink: 0; transition: transform .2s, color .2s; }
+    .btn:hover .arr { transform: translateX(3px); color: var(--primary); }
 
-    .btn-arrow {
-      font-size: 16px;
-      color: var(--text-dim);
-      flex-shrink: 0;
-      transition: transform 0.2s, color 0.2s;
+    /* WhatsApp highlight */
+    .btn-wa {
+      background: linear-gradient(135deg, rgba(37,211,102,.11), rgba(37,211,102,.05));
+      border-color: rgba(37,211,102,.25);
     }
-    .action-btn:hover .btn-arrow { transform: translateX(3px); color: var(--primary); }
-
-    /* WhatsApp special button */
-    .btn-wa-main {
-      background: linear-gradient(135deg, rgba(37,211,102,0.12), rgba(37,211,102,0.06));
-      border-color: rgba(37,211,102,0.3);
-    }
-    .btn-wa-main:hover { border-color: rgba(37,211,102,0.6); box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 20px rgba(37,211,102,0.12); }
+    .btn-wa:hover { border-color: rgba(37,211,102,.55); box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 18px rgba(37,211,102,.10); }
 
     /* Services chips */
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      padding: 4px 0;
-    }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 0; }
     .chip {
-      background: rgba(0,188,212,0.06);
-      border: 1px solid rgba(0,188,212,0.15);
-      color: var(--text-muted);
-      font-size: 10px;
-      font-weight: 500;
-      padding: 5px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.02em;
+      background: rgba(0,188,212,.06);
+      border: 1px solid rgba(0,188,212,.14);
+      color: var(--text-muted); font-size: 10px; font-weight: 500;
+      padding: 5px 11px; border-radius: 20px;
     }
 
-    /* Save contact CTA */
+    /* Save button */
     .save-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      padding: 15px;
-      margin-top: 8px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 15px; margin-top: 10px;
       background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      border: none;
-      border-radius: 14px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0,188,212,0.25);
+      border: none; border-radius: 14px; color: #fff;
+      font-family: inherit; font-size: 13px; font-weight: 700;
+      letter-spacing: .07em; text-transform: uppercase;
+      cursor: pointer; text-decoration: none;
+      transition: transform .2s, box-shadow .2s, filter .2s;
+      box-shadow: 0 4px 20px rgba(0,188,212,.28);
     }
-    .save-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(0,188,212,0.4);
-      filter: brightness(1.1);
-    }
+    .save-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,188,212,.42); filter: brightness(1.1); }
     .save-btn:active { transform: translateY(0); }
 
     /* Footer */
     .card-footer {
       border-top: 1px solid var(--border);
-      padding: 14px 24px;
-      text-align: center;
-      background: rgba(0,0,0,0.2);
+      padding: 13px 20px; text-align: center;
+      background: rgba(0,0,0,.2);
     }
-    .card-footer p {
-      font-size: 10px;
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
-    }
-    .card-footer a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
+    .card-footer p { font-size: 10px; color: var(--text-dim); letter-spacing: .04em; }
+    .card-footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
 
     /* Toast */
     .toast {
-      position: fixed;
-      bottom: 32px;
-      left: 50%;
+      position: fixed; bottom: 28px; left: 50%;
       transform: translateX(-50%) translateY(80px);
-      background: var(--surface2);
-      border: 1px solid var(--border-hover);
-      color: var(--text);
-      padding: 12px 24px;
-      border-radius: 12px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: transform 0.3s ease;
-      z-index: 1000;
-      white-space: nowrap;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      background: var(--surface2); border: 1px solid var(--border-hover);
+      color: var(--text); padding: 11px 22px; border-radius: 12px;
+      font-size: 13px; font-weight: 500;
+      transition: transform .3s ease; z-index: 1000;
+      white-space: nowrap; box-shadow: 0 8px 32px rgba(0,0,0,.6);
     }
     .toast.show { transform: translateX(-50%) translateY(0); }
 
     @media (max-width: 480px) {
-      .card { border-radius: 20px; }
-      .hero { padding: 32px 20px 24px; }
-      .card-body { padding: 18px 16px 22px; }
-      .company-name { font-size: 24px; }
+      .hero { padding: 34px 18px 26px; }
+      .card-body { padding: 18px 14px 22px; }
+      .company-name { font-size: 26px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating particles -->
-  <div class="particles" id="particles"></div>
+  <div class="particles" id="pts"></div>
 
-  <div class="card-wrapper">
+  <div class="card-wrap">
     <div class="card">
 
-      <!-- Hero -->
+      <!-- ── HERO ── -->
       <div class="hero">
         <div class="logo-ring">
-          <img src="images/logo.png" alt="Logo DOMSA" class="logo-img" onerror="this.style.display='none'"/>
+          <div class="ring-spin"></div>
+          <div class="ring-mask"></div>
+          <div class="logo-img-wrap" id="logoWrap">
+            <img
+              id="logoImg"
+              src="/images/logo.png"
+              alt="Logo DOMSA"
+              class="logo-img"
+              onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
+            />
+            <span id="logoFallback" class="logo-fallback">DOM</span>
+          </div>
         </div>
-        <div class="badge">Disponible para cotizar</div>
+
+        <div class="badge"><div class="badge-dot"></div>Disponible para cotizar</div>
         <h1 class="company-name">DOM<span>SA</span></h1>
-        <p class="tagline">Dragados y Obras Marinas S.A.<br>Flexifloats · Pontones · Chalanes · Dragados</p>
+        <p class="tagline">
+          Dragados y Obras Marinas S.A.<br>
+          <strong style="color:var(--primary);font-weight:600;">Flexifloats · Pontones · Chalanes · Dragados</strong>
+        </p>
       </div>
 
-      <!-- Body -->
+      <!-- ── BODY ── -->
       <div class="card-body">
 
-        <!-- WhatsApp principal -->
+        <!-- WhatsApp CTA -->
         <div class="section-label">Contacto directo</div>
-        <a class="action-btn btn-wa-main" href="https://wa.me/529932074771?text=Hola%20DOMSA%2C%20quiero%20cotizar%20sus%20servicios." target="_blank" rel="noopener">
-          <div class="btn-icon icon-wa">💬</div>
-          <div class="btn-texts">
-            <span class="btn-label">WhatsApp — Cotiza ahora</span>
-            <span class="btn-value">+52 993 207 4771</span>
+        <a class="btn btn-wa" href="https://wa.me/529932074771?text=Hola%20DOMSA%2C%20quiero%20cotizar%20sus%20servicios." target="_blank" rel="noopener">
+          <div class="ico ico-wa">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="#25d366">
+              <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.333 4.982L2 22l5.202-1.362a9.928 9.928 0 004.8 1.233h.005c5.505 0 9.99-4.479 9.99-9.986A9.975 9.975 0 0012.012 2zm5.82 14.24c-.246.693-1.42 1.275-1.956 1.348-.48.065-.968.106-2.9-.658-2.47-.978-4.047-3.486-4.17-3.649-.124-.163-1.012-1.347-1.012-2.569a2.532 2.532 0 01.764-1.892c.264-.265.577-.333.765-.333h.544c.163 0 .385-.061.602.457.22.53.754 1.838.82 1.97.065.132.108.286.02.463-.087.177-.13.286-.26.44-.131.156-.276.35-.395.47-.133.133-.272.278-.118.544.155.265.688 1.134 1.474 1.83.998.887 1.84 1.166 2.102 1.298.263.133.417.11.57-.066.154-.176.66-.772.836-1.037.177-.265.354-.22.597-.132.243.088 1.545.728 1.81.86.265.132.441.198.508.31.066.11.066.637-.18 1.33z"/>
+            </svg>
           </div>
-          <span class="btn-arrow">›</span>
+          <div class="btn-texts">
+            <span class="lbl">WhatsApp — Cotiza ahora</span>
+            <span class="val">+52 993 207 4771</span>
+          </div>
+          <span class="arr">›</span>
         </a>
 
         <!-- Teléfonos -->
         <div class="section-label">Teléfonos</div>
-        <a class="action-btn" href="tel:+529932074771">
-          <div class="btn-icon icon-phone">📞</div>
+        <a class="btn" href="tel:+529932074771">
+          <div class="ico ico-phone">📞</div>
           <div class="btn-texts">
-            <span class="btn-label">Línea principal</span>
-            <span class="btn-value">+52 993 207 4771</span>
+            <span class="lbl">Línea principal</span>
+            <span class="val">+52 993 207 4771</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
         </a>
-        <a class="action-btn" href="tel:+526622766690">
-          <div class="btn-icon icon-phone2">📱</div>
+        <a class="btn" href="tel:+526622766690">
+          <div class="ico ico-phone2">📱</div>
           <div class="btn-texts">
-            <span class="btn-label">Línea secundaria</span>
-            <span class="btn-value">+52 662 276 6690</span>
+            <span class="lbl">Línea secundaria</span>
+            <span class="val">+52 662 276 6690</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
         </a>
 
         <!-- Correos -->
         <div class="section-label">Correo electrónico</div>
-        <a class="action-btn" href="mailto:contacto@domsadragados.com">
-          <div class="btn-icon icon-mail">✉️</div>
+        <a class="btn" href="mailto:contacto@domsadragados.com">
+          <div class="ico ico-mail">✉️</div>
           <div class="btn-texts">
-            <span class="btn-label">Contacto general</span>
-            <span class="btn-value">contacto@domsadragados.com</span>
+            <span class="lbl">Contacto general</span>
+            <span class="val">contacto@domsadragados.com</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
         </a>
-        <a class="action-btn" href="mailto:Dyobrasmarinas@gmail.com">
-          <div class="btn-icon icon-mail2">📨</div>
+        <a class="btn" href="mailto:Dyobrasmarinas@gmail.com">
+          <div class="ico ico-mail2">📨</div>
           <div class="btn-texts">
-            <span class="btn-label">Cotizaciones</span>
-            <span class="btn-value">Dyobrasmarinas@gmail.com</span>
+            <span class="lbl">Cotizaciones</span>
+            <span class="val">Dyobrasmarinas@gmail.com</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
         </a>
 
         <!-- Ubicación -->
         <div class="section-label">Ubicación</div>
-        <a class="action-btn" href="https://maps.app.goo.gl/kWzdMDotHzHok1MU8" target="_blank" rel="noopener">
-          <div class="btn-icon icon-map">📍</div>
+        <a class="btn" href="https://maps.app.goo.gl/kWzdMDotHzHok1MU8" target="_blank" rel="noopener">
+          <div class="ico ico-map">📍</div>
           <div class="btn-texts">
-            <span class="btn-label">Oficina principal</span>
-            <span class="btn-value">Calle Mallorga #126, Veracruz</span>
+            <span class="lbl">Oficina principal</span>
+            <span class="val">Calle Mallorga #126, Veracruz</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
         </a>
 
         <!-- Sitio web -->
         <div class="section-label">Sitio web</div>
-        <a class="action-btn" href="https://domsa-dragados.vercel.app" target="_blank" rel="noopener">
-          <div class="btn-icon icon-web">🌐</div>
+        <a class="btn" href="https://domsa-dragados.vercel.app" target="_blank" rel="noopener">
+          <div class="ico ico-web">🌐</div>
           <div class="btn-texts">
-            <span class="btn-label">Página oficial</span>
-            <span class="btn-value">domsa-dragados.vercel.app</span>
+            <span class="lbl">Página oficial</span>
+            <span class="val">domsa-dragados.vercel.app</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
         </a>
 
         <!-- Redes sociales -->
         <div class="section-label">Redes sociales</div>
-        <a class="action-btn" href="https://www.facebook.com/domsa.dragados.3/" target="_blank" rel="noopener">
-          <div class="btn-icon icon-fb">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
-          </div>
-          <div class="btn-texts">
-            <span class="btn-label">Facebook</span>
-            <span class="btn-value">domsa.dragados.3</span>
-          </div>
-          <span class="btn-arrow">›</span>
-        </a>
-        <a class="action-btn" href="https://www.instagram.com/domsa_dragados/" target="_blank" rel="noopener">
-          <div class="btn-icon icon-ig">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="url(#ig-grad)">
-              <defs>
-                <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#fd5949"/>
-                  <stop offset="50%" stop-color="#d6249f"/>
-                  <stop offset="100%" stop-color="#285AEB"/>
-                </linearGradient>
-              </defs>
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        <a class="btn" href="https://www.facebook.com/domsa.dragados.3/" target="_blank" rel="noopener">
+          <div class="ico ico-fb">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
             </svg>
           </div>
           <div class="btn-texts">
-            <span class="btn-label">Instagram</span>
-            <span class="btn-value">@domsa_dragados</span>
+            <span class="lbl">Facebook</span>
+            <span class="val">domsa.dragados.3</span>
           </div>
-          <span class="btn-arrow">›</span>
+          <span class="arr">›</span>
+        </a>
+        <a class="btn" href="https://www.instagram.com/domsa_dragados/" target="_blank" rel="noopener">
+          <div class="ico ico-ig">
+            <svg width="20" height="20" viewBox="0 0 24 24">
+              <defs>
+                <linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%"   stop-color="#fd5949"/>
+                  <stop offset="50%"  stop-color="#d6249f"/>
+                  <stop offset="100%" stop-color="#285AEB"/>
+                </linearGradient>
+              </defs>
+              <path fill="url(#ig)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div class="btn-texts">
+            <span class="lbl">Instagram</span>
+            <span class="val">@domsa_dragados</span>
+          </div>
+          <span class="arr">›</span>
         </a>
 
         <!-- Servicios -->
         <div class="section-label">Servicios</div>
-        <div class="services">
-          <span class="chip">Flexifloats</span>
-          <span class="chip">Pontones</span>
-          <span class="chip">Chalanes</span>
-          <span class="chip">Dragados</span>
-          <span class="chip">Desazolves</span>
-          <span class="chip">Obras Marinas</span>
-          <span class="chip">Obra Civil</span>
-          <span class="chip">Maquinaria Pesada</span>
-          <span class="chip">Logística y Transporte</span>
+        <div class="chips">
+          <span class="chip">🚢 Flexifloats</span>
+          <span class="chip">⛵ Pontones</span>
+          <span class="chip">🛥 Chalanes</span>
+          <span class="chip">🌊 Dragados</span>
+          <span class="chip">💧 Desazolves</span>
+          <span class="chip">⚓ Obras Marinas</span>
+          <span class="chip">🏗 Obra Civil</span>
+          <span class="chip">🚜 Maquinaria Pesada</span>
+          <span class="chip">🚛 Transporte</span>
         </div>
 
-        <!-- Save contact -->
-        <button class="save-btn" id="saveBtn" onclick="descargarVCard()">
-          ⬇ Guardar Contacto
+        <!-- Save CTA -->
+        <button class="save-btn" onclick="descargarVCard()">
+          ⬇&nbsp; Guardar Contacto
         </button>
 
       </div>
 
-      <!-- Footer -->
+      <!-- ── FOOTER ── -->
       <div class="card-footer">
-        <p>República Mexicana · <a href="https://domsa-dragados.vercel.app">domsa-dragados.vercel.app</a></p>
+        <p>República Mexicana &nbsp;·&nbsp; <a href="https://domsa-dragados.vercel.app">domsa-dragados.vercel.app</a></p>
       </div>
 
     </div>
   </div>
 
-  <!-- Toast -->
-  <div class="toast" id="toast">✅ Contacto listo para guardar</div>
+  <div class="toast" id="toast">✅ Contacto guardado correctamente</div>
 
   <script>
     // Particles
-    const container = document.getElementById('particles');
-    for (let i = 0; i < 18; i++) {
+    const c = document.getElementById('pts');
+    for (let i = 0; i < 20; i++) {
       const p = document.createElement('div');
-      p.className = 'particle';
-      p.style.left = Math.random() * 100 + '%';
-      p.style.animationDuration = (8 + Math.random() * 12) + 's';
-      p.style.animationDelay = (Math.random() * 10) + 's';
-      p.style.width = p.style.height = (1 + Math.random() * 2) + 'px';
-      p.style.opacity = Math.random() * 0.5;
-      container.appendChild(p);
+      p.className = 'p';
+      p.style.cssText = `left:${Math.random()*100}%;width:${1+Math.random()*2}px;height:${1+Math.random()*2}px;animation-duration:${9+Math.random()*12}s;animation-delay:${Math.random()*10}s`;
+      c.appendChild(p);
     }
 
-    // Download vCard
+    // vCard download
     function descargarVCard() {
-      const vcard = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'FN:DOMSA Dragados y Obras Marinas',
-        'ORG:DOMSA',
-        'TITLE:Dragados, Obras Marinas y Renta de Equipos',
+      const lines = [
+        'BEGIN:VCARD','VERSION:3.0',
+        'FN:DOMSA Dragados y Obras Marinas','N:Marinas;Dragados y Obras;;;',
+        'ORG:DOMSA','TITLE:Dragados · Obras Marinas · Renta de Equipos',
         'TEL;TYPE=CELL,PREF:+529932074771',
         'TEL;TYPE=CELL:+526622766690',
-        'EMAIL;TYPE=WORK:contacto@domsadragados.com',
+        'EMAIL;TYPE=WORK,PREF:contacto@domsadragados.com',
         'EMAIL;TYPE=WORK:Dyobrasmarinas@gmail.com',
         'ADR;TYPE=WORK:;;Calle Mallorga #126;Veracruz;Veracruz;;México',
         'URL:https://domsa-dragados.vercel.app',
         'X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/domsa.dragados.3/',
         'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/domsa_dragados/',
-        'NOTE:Flexifloats · Pontones · Chalanes · Dragados · Obras Marinas · Maquinaria Pesada',
+        'X-SOCIALPROFILE;TYPE=whatsapp:https://wa.me/529932074771',
+        'NOTE:Flexifloats · Pontones · Chalanes · Dragados · Desazolves · Obras Marinas · Obra Civil · Maquinaria Pesada · Logística',
         'END:VCARD'
-      ].join('\n');
-
-      const blob = new Blob([vcard], { type: 'text/vcard' });
+      ];
+      const blob = new Blob([lines.join('\n')], { type: 'text/vcard' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'DOMSA_Contacto.vcf';
-      a.click();
+      a.href = url; a.download = 'DOMSA_Contacto.vcf'; a.click();
       URL.revokeObjectURL(url);
-
-      // Show toast
-      const toast = document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 3000);
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
     }
   </script>
 
