@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://renta-flexifloats-pontones-chalanes-mexico.vercel.app/sitemap.xml
+Sitemap: https://domsa-dragados.vercel.app/sitemap.xml
