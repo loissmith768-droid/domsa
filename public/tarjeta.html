@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOMSA — Tarjeta Digital | Dragados y Obras Marinas</title>
+  <meta name="description" content="Tarjeta de contacto digital de DOMSA Dragados y Obras Marinas. Teléfono, WhatsApp, correo, ubicación y redes sociales."/>
+  <meta name="robots" content="noindex"/>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080c14;
+      --surface: #0e1525;
+      --surface2: #131d30;
+      --border: rgba(255,255,255,0.08);
+      --border-hover: rgba(0,188,212,0.5);
+      --primary: #00bcd4;
+      --primary-glow: rgba(0,188,212,0.25);
+      --primary-dark: #0097a7;
+      --text: #e8edf5;
+      --text-muted: #7a8fa6;
+      --text-dim: #4a5f75;
+      --gold: #f4c842;
+      --green: #22c55e;
+      --wa-green: #25d366;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(0,188,212,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 90%, rgba(0,97,137,0.1) 0%, transparent 55%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 50%;
+      opacity: 0;
+      animation: float-up linear infinite;
+    }
+    @keyframes float-up {
+      0%   { transform: translateY(100vh) translateX(0); opacity: 0; }
+      10%  { opacity: 0.6; }
+      90%  { opacity: 0.3; }
+      100% { transform: translateY(-10vh) translateX(30px); opacity: 0; }
+    }
+
+    /* Card container */
+    .card-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* Header glow line */
+    .card-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      border-radius: 2px;
+      filter: blur(1px);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow:
+        0 4px 6px rgba(0,0,0,0.4),
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 80px rgba(0,188,212,0.04);
+    }
+
+    /* Hero section */
+    .hero {
+      background: linear-gradient(160deg, #0a1628 0%, #0d1f3c 50%, #091520 100%);
+      padding: 40px 32px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0.4;
+    }
+
+    /* Decorative ring behind logo */
+    .logo-ring {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 20px;
+    }
+    .logo-ring::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: conic-gradient(var(--primary), var(--primary-dark), transparent, var(--primary));
+      animation: spin 8s linear infinite;
+    }
+    .logo-ring::after {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: var(--surface);
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .logo-img {
+      position: relative;
+      z-index: 1;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--surface);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,188,212,0.1);
+      border: 1px solid rgba(0,188,212,0.25);
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .company-name {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .company-name span { color: var(--primary); }
+
+    .tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+    }
+
+    /* Body */
+    .card-body {
+      padding: 24px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* Section label */
+    .section-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin: 12px 0 6px 4px;
+    }
+
+    /* Action button */
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent, rgba(0,188,212,0.05));
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .action-btn:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 16px rgba(0,188,212,0.08);
+    }
+    .action-btn:hover::before { opacity: 1; }
+    .action-btn:active { transform: translateY(0); }
+
+    .btn-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+    }
+
+    .icon-phone  { background: rgba(0,188,212,0.12); }
+    .icon-phone2 { background: rgba(100,149,237,0.12); }
+    .icon-wa     { background: rgba(37,211,102,0.12); }
+    .icon-mail   { background: rgba(244,200,66,0.12); }
+    .icon-mail2  { background: rgba(200,162,200,0.12); }
+    .icon-map    { background: rgba(255,99,71,0.12); }
+    .icon-web    { background: rgba(0,188,212,0.12); }
+    .icon-fb     { background: rgba(24,119,242,0.12); }
+    .icon-ig     { background: rgba(225,48,108,0.12); }
+
+    .btn-texts { flex: 1; min-width: 0; }
+    .btn-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+    }
+    .btn-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    .btn-arrow {
+      font-size: 16px;
+      color: var(--text-dim);
+      flex-shrink: 0;
+      transition: transform 0.2s, color 0.2s;
+    }
+    .action-btn:hover .btn-arrow { transform: translateX(3px); color: var(--primary); }
+
+    /* WhatsApp special button */
+    .btn-wa-main {
+      background: linear-gradient(135deg, rgba(37,211,102,0.12), rgba(37,211,102,0.06));
+      border-color: rgba(37,211,102,0.3);
+    }
+    .btn-wa-main:hover { border-color: rgba(37,211,102,0.6); box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 0 20px rgba(37,211,102,0.12); }
+
+    /* Services chips */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 4px 0;
+    }
+    .chip {
+      background: rgba(0,188,212,0.06);
+      border: 1px solid rgba(0,188,212,0.15);
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Save contact CTA */
+    .save-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 15px;
+      margin-top: 8px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border: none;
+      border-radius: 14px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,188,212,0.25);
+    }
+    .save-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,188,212,0.4);
+      filter: brightness(1.1);
+    }
+    .save-btn:active { transform: translateY(0); }
+
+    /* Footer */
+    .card-footer {
+      border-top: 1px solid var(--border);
+      padding: 14px 24px;
+      text-align: center;
+      background: rgba(0,0,0,0.2);
+    }
+    .card-footer p {
+      font-size: 10px;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+    .card-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--surface2);
+      border: 1px solid var(--border-hover);
+      color: var(--text);
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      white-space: nowrap;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 480px) {
+      .card { border-radius: 20px; }
+      .hero { padding: 32px 20px 24px; }
+      .card-body { padding: 18px 16px 22px; }
+      .company-name { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
+  <div class="card-wrapper">
+    <div class="card">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="logo-ring">
+          <img src="images/logo.png" alt="Logo DOMSA" class="logo-img" onerror="this.style.display='none'"/>
+        </div>
+        <div class="badge">Disponible para cotizar</div>
+        <h1 class="company-name">DOM<span>SA</span></h1>
+        <p class="tagline">Dragados y Obras Marinas S.A.<br>Flexifloats · Pontones · Chalanes · Dragados</p>
+      </div>
+
+      <!-- Body -->
+      <div class="card-body">
+
+        <!-- WhatsApp principal -->
+        <div class="section-label">Contacto directo</div>
+        <a class="action-btn btn-wa-main" href="https://wa.me/529932074771?text=Hola%20DOMSA%2C%20quiero%20cotizar%20sus%20servicios." target="_blank" rel="noopener">
+          <div class="btn-icon icon-wa">💬</div>
+          <div class="btn-texts">
+            <span class="btn-label">WhatsApp — Cotiza ahora</span>
+            <span class="btn-value">+52 993 207 4771</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+
+        <!-- Teléfonos -->
+        <div class="section-label">Teléfonos</div>
+        <a class="action-btn" href="tel:+529932074771">
+          <div class="btn-icon icon-phone">📞</div>
+          <div class="btn-texts">
+            <span class="btn-label">Línea principal</span>
+            <span class="btn-value">+52 993 207 4771</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+        <a class="action-btn" href="tel:+526622766690">
+          <div class="btn-icon icon-phone2">📱</div>
+          <div class="btn-texts">
+            <span class="btn-label">Línea secundaria</span>
+            <span class="btn-value">+52 662 276 6690</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+
+        <!-- Correos -->
+        <div class="section-label">Correo electrónico</div>
+        <a class="action-btn" href="mailto:contacto@domsadragados.com">
+          <div class="btn-icon icon-mail">✉️</div>
+          <div class="btn-texts">
+            <span class="btn-label">Contacto general</span>
+            <span class="btn-value">contacto@domsadragados.com</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+        <a class="action-btn" href="mailto:Dyobrasmarinas@gmail.com">
+          <div class="btn-icon icon-mail2">📨</div>
+          <div class="btn-texts">
+            <span class="btn-label">Cotizaciones</span>
+            <span class="btn-value">Dyobrasmarinas@gmail.com</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+
+        <!-- Ubicación -->
+        <div class="section-label">Ubicación</div>
+        <a class="action-btn" href="https://maps.app.goo.gl/kWzdMDotHzHok1MU8" target="_blank" rel="noopener">
+          <div class="btn-icon icon-map">📍</div>
+          <div class="btn-texts">
+            <span class="btn-label">Oficina principal</span>
+            <span class="btn-value">Calle Mallorga #126, Veracruz</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+
+        <!-- Sitio web -->
+        <div class="section-label">Sitio web</div>
+        <a class="action-btn" href="https://domsa-dragados.vercel.app" target="_blank" rel="noopener">
+          <div class="btn-icon icon-web">🌐</div>
+          <div class="btn-texts">
+            <span class="btn-label">Página oficial</span>
+            <span class="btn-value">domsa-dragados.vercel.app</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+
+        <!-- Redes sociales -->
+        <div class="section-label">Redes sociales</div>
+        <a class="action-btn" href="https://www.facebook.com/domsa.dragados.3/" target="_blank" rel="noopener">
+          <div class="btn-icon icon-fb">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </div>
+          <div class="btn-texts">
+            <span class="btn-label">Facebook</span>
+            <span class="btn-value">domsa.dragados.3</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+        <a class="action-btn" href="https://www.instagram.com/domsa_dragados/" target="_blank" rel="noopener">
+          <div class="btn-icon icon-ig">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="url(#ig-grad)">
+              <defs>
+                <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#fd5949"/>
+                  <stop offset="50%" stop-color="#d6249f"/>
+                  <stop offset="100%" stop-color="#285AEB"/>
+                </linearGradient>
+              </defs>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div class="btn-texts">
+            <span class="btn-label">Instagram</span>
+            <span class="btn-value">@domsa_dragados</span>
+          </div>
+          <span class="btn-arrow">›</span>
+        </a>
+
+        <!-- Servicios -->
+        <div class="section-label">Servicios</div>
+        <div class="services">
+          <span class="chip">Flexifloats</span>
+          <span class="chip">Pontones</span>
+          <span class="chip">Chalanes</span>
+          <span class="chip">Dragados</span>
+          <span class="chip">Desazolves</span>
+          <span class="chip">Obras Marinas</span>
+          <span class="chip">Obra Civil</span>
+          <span class="chip">Maquinaria Pesada</span>
+          <span class="chip">Logística y Transporte</span>
+        </div>
+
+        <!-- Save contact -->
+        <button class="save-btn" id="saveBtn" onclick="descargarVCard()">
+          ⬇ Guardar Contacto
+        </button>
+
+      </div>
+
+      <!-- Footer -->
+      <div class="card-footer">
+        <p>República Mexicana · <a href="https://domsa-dragados.vercel.app">domsa-dragados.vercel.app</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">✅ Contacto listo para guardar</div>
+
+  <script>
+    // Particles
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = (8 + Math.random() * 12) + 's';
+      p.style.animationDelay = (Math.random() * 10) + 's';
+      p.style.width = p.style.height = (1 + Math.random() * 2) + 'px';
+      p.style.opacity = Math.random() * 0.5;
+      container.appendChild(p);
+    }
+
+    // Download vCard
+    function descargarVCard() {
+      const vcard = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'FN:DOMSA Dragados y Obras Marinas',
+        'ORG:DOMSA',
+        'TITLE:Dragados, Obras Marinas y Renta de Equipos',
+        'TEL;TYPE=CELL,PREF:+529932074771',
+        'TEL;TYPE=CELL:+526622766690',
+        'EMAIL;TYPE=WORK:contacto@domsadragados.com',
+        'EMAIL;TYPE=WORK:Dyobrasmarinas@gmail.com',
+        'ADR;TYPE=WORK:;;Calle Mallorga #126;Veracruz;Veracruz;;México',
+        'URL:https://domsa-dragados.vercel.app',
+        'X-SOCIALPROFILE;TYPE=facebook:https://www.facebook.com/domsa.dragados.3/',
+        'X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/domsa_dragados/',
+        'NOTE:Flexifloats · Pontones · Chalanes · Dragados · Obras Marinas · Maquinaria Pesada',
+        'END:VCARD'
+      ].join('\n');
+
+      const blob = new Blob([vcard], { type: 'text/vcard' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'DOMSA_Contacto.vcf';
+      a.click();
+      URL.revokeObjectURL(url);
+
+      // Show toast
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+  </script>
+
+</body>
+</html>
